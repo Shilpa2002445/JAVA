@@ -1,0 +1,88 @@
+//Define class Square with a variable to initialise the side length with the help of a
+//constructor. Define two methods which will return area and parimeter of square .
+//Define class cube with appropriate variable name and constructor to initialise the
+//value . Define two methods which will return volume and total surface area of cube .
+//Define class circle having a variable radius with the appropriate required constructor
+//to initialise its value and will have two methods to print the area and circumference
+//to the console .
+//Define main class , make an object of each class and envoke all the possible methods
+//and display it . 
+
+class Square {
+    private double side;
+
+    
+    public Square(double s) {
+        side = s;
+    }
+
+    
+    public double calculateArea() {
+        return side * side;
+    }
+
+    
+    public double calculatePerimeter() {
+        return 4 * side;
+    }
+}
+
+class Cube {
+    private double side;
+
+    
+    public Cube(double s) {
+        side = s;
+    }
+
+    
+    public double calculateVolume() {
+        return side * side * side;
+    }
+
+    
+    public double calculateSurfaceArea() {
+        return 6 * side * side;
+    }
+}
+
+class Circle {
+    private double radius;
+
+    
+    public Circle(double r) {
+        radius = r;
+    }
+
+    
+    public double calculateArea() {
+         return 3.14 * radius * radius;
+        
+    }
+
+    
+    public double calculateCircumference() {
+        return 2 * 3.14 * radius;
+        
+    }
+}
+
+public class Problem2 {
+    public static void main(String[] args) {
+        
+        Square square = new Square(2.0);
+        Cube cube = new Cube(3.0);
+        Circle circle = new Circle(4.0);
+
+        
+        System.out.println("Square Area: " + square.calculateArea());
+        System.out.println("Square Perimeter: " + square.calculatePerimeter());
+
+        System.out.println("Cube Volume: " + cube.calculateVolume());
+        System.out.println("Cube Surface Area: " + cube.calculateSurfaceArea());
+
+        System.out.println("Circle Area: " + circle.calculateArea());
+        System.out.println("Circle Circumference: " + circle.calculateCircumference());
+    }
+}
+
